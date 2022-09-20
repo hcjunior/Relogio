@@ -1,0 +1,66 @@
+/* Layout */
+.main {
+    display: flex;
+    padding: 2em;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+}
+
+.relogio-box,
+#relogio {
+    width: 100%;
+}
+
+/* Style relógio */
+.circulo {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.circulo-centro {
+    fill: #000;
+}
+.marcador-hora {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.ponteiro-hora {
+    fill: none;
+    stroke: #000;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.ponteiro-minuto {
+    fill: none;
+    stroke: #000;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.ponteiro-segundo {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Caixa transparente que certifica-se que os ponteiros estão corretamente centralizados*/
+.sizing-box {
+    fill: none;
+}
+
+/* Faz com que os ponteiros caminhem ao redor do mesmo ponto central */
+/* Opcional: Use transition para criar animação */
+#hora,
+#minuto,
+#segundo {
+    transform-origin: 300px 300px;
+    transition: transform .5s ease-in-out;
+}
